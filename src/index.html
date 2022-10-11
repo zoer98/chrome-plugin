@@ -9,17 +9,37 @@
 </head>
 
 <body>
-  <!-- <div class="setting">
-    <p class="ts" style="display:none;">输入正确的时间</p>
-    <input type="text" placeholder="输入你的下班时间 如 17:45:00" value="" id="input">
-    <div id="btn">确定</div>
-  </div> -->
-  <div class="container">
-    <h1>距离下班倒计时还有</h1>
-    <p id="content">0时0分0秒</p>
+  <ul id="tabs">
+    <li><a href="#" title="tab1">下班倒计时</a></li>
+    <li><a href="#" title="tab2">功能2</a></li>
+    <li><a href="#" title="tab3">功能3</a></li>
+    <li><a href="#" title="tab4">关于</a></li>
+  </ul>
+  <div id="content">
+    <div id="tab1">
+      <!-- <div class="setting">
+        <p class="ts" style="display:none;">输入正确的时间</p>
+        <input type="text" placeholder="输入你的下班时间 如 17:45:00" value="" id="input">
+        <div id="btn">确定</div>
+      </div> -->
+      <div class="container">
+        <h1>距离下班还有</h1>
+        <p id="time">0时0分0秒</p>
+      </div>
+    </div>
+    <div id="tab2">
+      null
+    </div>
+    <div id="tab3">
+      null
+    </div>
+    <div id="tab4">
+      一个chrome扩展
+    </div>
   </div>
+
   <script src="./images/jquery.js"></script>
-  <script src="./js/main.dev.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

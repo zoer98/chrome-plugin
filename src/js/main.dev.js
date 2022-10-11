@@ -1,6 +1,19 @@
 "use strict";
 
-// 下班时间
+// tab选项卡
+$(function () {
+  $("#content>div").hide();
+  $("#tabs li:first").attr("class", "active");
+  $("#content div:first").fadeIn();
+  $('#tabs a').click(function (e) {
+    e.preventDefault();
+    $("#content>div").hide();
+    $("#tabs li").attr("class", "");
+    $(this).parent().attr("class", "active");
+    $('#' + $(this).attr('title')).fadeIn();
+  });
+}); // 下班时间
+
 var workedTime = '17:45:00';
 var date = new Date();
 var nowMonth = date.getMonth() + 1;
@@ -27,7 +40,7 @@ function getDistanceSpecifiedTime(dateTime) {
   var m = Math.floor(t / 1000 / 60 % 60);
   var s = Math.floor(t / 1000 % 60);
   var html = h + "时" + m + "分" + s + "秒";
-  $('#content').html(html);
+  $('#time').html(html);
 }
 
 getDistanceSpecifiedTime(nowDate + ' ' + workedTime);
